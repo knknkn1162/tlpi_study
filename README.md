@@ -18,7 +18,6 @@ make # generate libtlpi.a in the parent directory
 3. If you compile each C code, return to the parent directory and take few commands.
 
 ```
-cd ./fileio
 # make sure that the `-L` option to indicate the directory of the static library, which is in the root directory.
 clang -o copy -L. -ltlpi -Ilib fileio/copy.c # you can replace clang with gcc.
 ```
