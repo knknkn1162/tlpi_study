@@ -15,7 +15,7 @@ cd lib
 make # generate libtlpi.a in the parent directory
 ```
 
-3. If you compile each C code, return to the parent directory and take few commands.
+3. If you compile each C code, return to the parent directory and take the below command.
 
 ```
 # make sure that the `-L` option to indicate the directory of the static library, which is in the root directory.
