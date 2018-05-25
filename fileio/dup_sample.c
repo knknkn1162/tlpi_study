@@ -12,6 +12,10 @@ int main(int argc, char* argv[]) {
   // duplicate file descripter #1(STDOUT) to #2.
   // Indeed, replace STDERR with STDOUT.
   newfd = dup2(1, 2);  // or dup(1);
+  if (newfd == -1) {
+    printf("dup2");
+    errExit("dd");
+  }
   numWritten =
       write(newfd, &argv[1][0], strlen(&argv[1][0]));  // STDERR -> STDOUT
   if (numWritten == -1) {
