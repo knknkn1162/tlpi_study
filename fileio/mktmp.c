@@ -5,6 +5,7 @@
 
 int main(void) {
   int fd;
+  // The characters X were replaced with random chars.
   char template[] = "/tmp/somestringXXXXXX";
 
   fd = mkstemp(template);
