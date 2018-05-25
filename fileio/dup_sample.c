@@ -12,6 +12,7 @@ int main(int argc, char* argv[]) {
   // duplicate file descripter #1(STDOUT) to #2.
   // Indeed, replace STDERR with STDOUT.
   newfd = dup2(1, 2);  // or dup(1);
+  // newfd = fcntl(1, F_DUPFD, 100);  // newfd is greater than 100
   if (newfd == -1) {
     printf("dup2");
     errExit("dd");
