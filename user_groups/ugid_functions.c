@@ -78,4 +78,5 @@ int main(int argc, char *argv[]) {
   while ((pw = getpwent()) != NULL) {
     printf("%d:%s\n", pw->pw_uid, pw->pw_name);
   }
+  endpwent();
 }
