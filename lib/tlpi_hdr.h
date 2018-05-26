@@ -12,7 +12,9 @@
 #include "error_functions.h"
 #include "get_num.h"
 
+#ifndef HAS_BOOLEAN
 typedef enum { FALSE, TRUE } Boolean;
+#endif
 
 #define min(m, n) ((m) < (n) ? (m) : (n))
 #define max(m, n) ((m) > (n) ? (m) : (n))
