@@ -7,6 +7,8 @@ int main(void) {
   printf("Initial program break: %10p\n", sbrk(0));
 #define SIZE 1000
   str = malloc(1000000);
+  char bm[100];
+  // free(bm); // prohibited
   for (i = 0; i < SIZE; i++) {
     str[i] = 'a' + i % 20;
   }
