@@ -1,4 +1,6 @@
-// see https://stackoverflow.com/a/9187099/8774173
+// In MacOX, use the below header instead of declaring `extern char etext,
+// edata, end`.
+// See also https://stackoverflow.com/a/9187099/8774173
 #include <mach-o/getsect.h>
 #include <stdio.h>
 #include <unistd.h>
