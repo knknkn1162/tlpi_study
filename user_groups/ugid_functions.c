@@ -69,6 +69,13 @@ int main(int argc, char *argv[]) {
   char *name = userNameFromId(id);
   char *groupName = groupNameFromId(id);
 
+  struct passwd *pw;
+
   printf("name: %s\n", name);
   printf("group name: %s\n", groupName);
+  printf("+ passwd list\n");
+
+  while ((pw = getpwent()) != NULL) {
+    printf("%d:%s\n", pw->pw_uid, pw->pw_name);
+  }
 }
