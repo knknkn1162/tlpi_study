@@ -6,12 +6,9 @@
 #include <unistd.h>
 
 int main(void) {
-  void *brk = sbrk(0);
-  /* % ./res */
-  /* end: 0x100003000, brk: 0x10994f000 */
-  /* MOB18006:clang % ./res */
-  /* end: 0x100003000, brk: 0x107393000 */
-  /* MOB18006:clang % ./res */
-  /* end: 0x100003000, brk: 0x1057bf000 */
-  printf("end: %p, brk: %p\n", (void *)get_end(), brk);
+  void *brk = (void *)sbrk(0);
+  void *end = (void *)get_end();
+  /* end: 0x100003000, brk: 0x1008ed000 */
+  /* size: (9347072) */
+  printf("end: %p, brk: %p\nsize: (%ld)\n", end, brk, (brk - end));
 }
