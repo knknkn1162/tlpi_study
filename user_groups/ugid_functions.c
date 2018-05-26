@@ -1,6 +1,9 @@
 #include <ctype.h>
 #include <grp.h>
 #include <pwd.h>
+// in macOS, there doesn't exist shadow password file.
+// Try also `ls /etc | grep shadow`.
+//#include <shadow.h>
 #include <sys/types.h>
 
 #include "tlpi_hdr.h"
