@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
   printf("+ passwd list\n");
 
   while ((pw = getpwent()) != NULL) {
-    printf("%d:%s\n", pw->pw_uid, pw->pw_name);
+    printf("%d:%s -> password: %s\n", pw->pw_uid, pw->pw_name, pw->pw_passwd);
   }
   endpwent();
 }
