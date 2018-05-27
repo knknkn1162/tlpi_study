@@ -55,4 +55,7 @@ int main(int argc, char* argv[]) {
   fpathconfPrint("_PC_NAME_MAX", STDIN_FILENO, _PC_NAME_MAX);
   fpathconfPrint("_PC_PATH_MAX", STDIN_FILENO, _PC_PATH_MAX);
   fpathconfPrint("_PC_PIPE_BUF", STDIN_FILENO, _PC_PIPE_BUF);
+
+  sysConfPrint("_SC_THREADS", _SC_THREADS);
+  sysConfPrint("_SC_JOB_CONTROL", _SC_JOB_CONTROL);
 }
