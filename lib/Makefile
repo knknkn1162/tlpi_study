@@ -8,13 +8,6 @@
 #
 include ../Makefile.inc
 
-# The library build is "brute force" -- we don't bother with
-# dependency checking.
-
-include ../Makefile.inc
-
-all : ${TLPI_LIB}
-
 ${TLPI_LIB} : *.c ename.c.inc
 	${CC} -c -g ${CFLAGS} *.c
 	${RM} ${TLPI_LIB}

@@ -13,6 +13,8 @@ This is my reminder for the book TLPI with MacOSX (High Sierra). This code of th
 cd lib
 # Remove CC option in the Makefile.inc if you want to compile codes with gcc.
 make # generate libtlpi.a in the parent directory
+# or you can use gcc like this:
+make CC=gcc # or change CC option in ./Makefile.inc
 ```
 
 3. If you compile each C code, return to the parent directory and take the below command.
@@ -20,6 +22,8 @@ make # generate libtlpi.a in the parent directory
 ```
 # make sure that the `-L` option to indicate the directory of the static library, which is in the root directory.
 clang -o copy -L. -ltlpi -Ilib fileio/copy.c # you can replace clang with gcc.
+# or gcc
+gcc -o copy ./fileio/copy.c -L. -ltlpi -Ilib fileio/copy.c # you can replace clang with gcc.
 ```
 
 ## Licence
